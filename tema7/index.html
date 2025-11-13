@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visualizador de Datos Escolares</title>
+  <meta name="description" content="App PWA para organizar, representar e interpretar datos en tablas y gráficas.">
+  <meta name="theme-color" content="#3f51b5">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Visualizador de Datos Escolares</h1>
+    <p>Manejo de la información: Tablas, gráficos y organización de datos</p>
+  </header>
+  <main>
+    <section class="form-section">
+      <form id="data-form">
+        <label>
+          Categoría
+          <input type="text" id="categoria" required placeholder="Ej. Matemáticas">
+        </label>
+        <label>
+          Valor
+          <input type="number" id="valor" min="0" step="0.01" required placeholder="0.00">
+        </label>
+        <label>
+          Fecha
+          <input type="date" id="fecha" required>
+        </label>
+        <button type="submit">Agregar</button>
+      </form>
+      <button id="load-demo" title="Cargar datos de demostración">Demostración</button>
+    </section>
+
+    <div class="stats-charts">
+      <div class="card">
+        <h2>Indicadores</h2>
+        <div class="stats">
+          <span>Promedio general: <strong id="stat-promedio">-</strong></span>
+          <span>Máximo: <strong id="stat-max">-</strong></span>
+          <span>Mínimo: <strong id="stat-min">-</strong></span>
+        </div>
+        <p class="interpretation" id="interpretacion">No hay datos para interpretar.</p>
+      </div>
+      <div class="card">
+        <h2>Gráfico de barras</h2>
+        <div class="chart-container">
+          <canvas id="barChart"></canvas>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Gráfico de pastel</h2>
+        <div class="chart-container">
+          <canvas id="pieChart"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Categoría</th>
+            <th>Valor</th>
+            <th>Fecha</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="tabla-body">
+        </tbody>
+      </table>
+    </div>
+
+    <div class="actions">
+      <button id="export-csv">Exportar CSV</button>
+      <button id="clear-data">Limpiar todo</button>
+    </div>
+  </main>
+
+  <script type="module" src="js/app.js"></script>
+  <script>
+    // Registro del service worker para convertir la app en PWA
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js')
+          .then(reg => console.log('Service Worker registrado:', reg.scope))
+          .catch(err => console.error('Error al registrar el Service Worker:', err));
+      });
+    }
+  </script>
+</body>
+</html>
