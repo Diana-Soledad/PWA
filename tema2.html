@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Resolución de problemas aditivos y multiplicativos</title>
+<link rel="stylesheet" href="tema2.css" />
+</head>
+<body>
+<div class="container">
+<header>
+<div>
+<h1>Problemas aditivos y multiplicativos — práctica interactiva</h1>
+<p class="lead">Objetivo: resolver problemas que combinan dos o más transformaciones con números naturales, decimales y fraccionarios; además practicar multiplicación y división en contextos reales.</p>
+</div>
+</header>
+
+
+<section class="card">
+<h2>Instrucciones rápidas</h2>
+<ul>
+<li>Lee el enunciado y usa las casillas para trabajar o introducir la respuesta final.</li>
+<li>Pulsa "Comprobar" para ver si está correcta y ver los pasos de solución.</li>
+<li>Usa "Sugerencia" para ver una pista que desglose las transformaciones.</li>
+<li>Genera nuevos problemas con los botones.</li>
+</ul>
+</section>
+
+
+<section class="card">
+<div class="row">
+<div class="col">
+<h3>Problema aditivo (2+ transformaciones)</h3>
+<div id="add-problem" class="exercise"></div>
+<label for="add-answer">Tu respuesta</label>
+<input id="add-answer" type="text" placeholder="Respuesta" />
+<div class="buttons">
+<button id="check-add">Comprobar</button>
+<button id="hint-add" class="ghost">Sugerencia</button>
+<button id="new-add" class="ghost">Nuevo problema</button>
+</div>
+<div id="add-output"></div>
+</div>
+
+
+<div class="col">
+<h3>Problema multiplicación / división (contexto)</h3>
+<div id="mul-problem" class="exercise"></div>
+<label for="mul-answer">Tu respuesta</label>
+<input id="mul-answer" type="text" placeholder="Respuesta" />
+<div class="buttons">
+<button id="check-mul">Comprobar</button>
+<button id="hint-mul" class="ghost">Sugerencia</button>
+<button id="new-mul" class="ghost">Nuevo problema</button>
+</div>
+<div id="mul-output"></div>
+</div>
+</div>
+</section>
+
+
+<section class="card">
+<h3>Hoja rápida (imprime)</h3>
+<p class="teacher">3 ejercicios de cada tipo listos para imprimir.</p>
+<button id="generate-sheet">Generar hoja</button>
+<div id="sheet"></div>
+</section>
+
+
+<section class="card teacher">
+<h3>Notas para el docente</h3>
+<ul>
+<li>Competencia: resolver problemas con dos o más transformaciones.</li>
+<li>Evaluación: explicar cada transformación.</li>
+<li>Adaptación: variar dificultad con más pasos o fracciones.</li>
+</ul>
+</section>
+
+
+<footer>Plantilla interactiva — personalizable.</footer>
+</div>
+
+
+<script src="tema2.js"></script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+/* ===========================
+   ESTILOS GENERALES
+   =========================== */
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #f6f6f6;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* ===========================
+   CONTENEDOR PRINCIPAL
+   =========================== */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ===========================
+   ENCABEZADO
+   =========================== */
+header {
+  background-color: #4b7bec;
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  margin-bottom: 10px;
+}
+
+header .lead {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* ===========================
+   TARJETAS / SECCIONES
+   =========================== */
+.card {
+  background-color: white;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+
+/* Para secciones del docente */
+.card.teacher {
+  background-color: #eaf0ff;
+  border-left: 5px solid #4b7bec;
+}
+
+/* ===========================
+   DISTRIBUCIÓN COLUMNAS
+   =========================== */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.col {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* ===========================
+   BOTONES
+   =========================== */
+button {
+  background-color: #4b7bec;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 5px;
+}
+
+button:hover {
+  background-color: #3867d6;
+}
+
+button.ghost {
+  background-color: #dcdcdc;
+  color: #333;
+}
+
+button.ghost:hover {
+  background-color: #c8c8c8;
+}
+
+/* ===========================
+   INPUTS
+   =========================== */
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* ===========================
+   SECCIÓN DE EJERCICIOS
+   =========================== */
+.exercise {
+  background: #fafafa;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+/* ===========================
+   PIE DE PÁGINA
+   =========================== */
+footer {
+  text-align: center;
+  padding: 10px;
+  color: #666;
+  font-size: 0.9rem;
+}
