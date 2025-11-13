@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 self.addEventListener('install', e => {
   e.waitUntil(
     caches.open('mat-pwa').then(cache => {
@@ -19,3 +20,26 @@ self.addEventListener('fetch', e => {
     })
   );
 });
+=======
+self.addEventListener('install', e => {
+  e.waitUntil(
+    caches.open('mat-pwa').then(cache => {
+      return cache.addAll([
+        './',
+        './index.html',
+        './style.css',
+        './script.js',
+        './manifest.json'
+      ]);
+    })
+  );
+});
+
+self.addEventListener('fetch', e => {
+  e.respondWith(
+    caches.match(e.request).then(response => {
+      return response || fetch(e.request);
+    })
+  );
+});
+>>>>>>> 6953e1193cc30d017f529228d62f175d0ac7ba82

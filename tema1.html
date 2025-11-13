@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -94,3 +95,101 @@
 
   <a href="index.html" class="boton" style="margin-top:1.5rem;">⬅️ Volver al inicio</a>
 </section>
+=======
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tema 1 - Números y Sistemas de Numeración</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="tema1.js"></script>
+</head>
+<body>
+  <header>
+    <h1>🔢 Números y Sistemas de Numeración</h1>
+    <p>Aprende a leer, escribir y comparar números naturales, fraccionarios y decimales.</p>
+  </header>
+
+  <main class="contenido">
+    <!-- Introducción teórica -->
+    <section class="card pastel-rosa fade-in">
+      <h2>📘 Valor Posicional</h2>
+      <p>El <b>valor posicional</b> indica la importancia de cada cifra según su posición dentro del número.</p>
+      <div class="ejemplo-valor">
+        <p><b>Ejemplo:</b> En el número <span class="resaltado">4,573.82</span></p>
+        <ul>
+          <li>El <b>4</b> vale 4,000 (miles)</li>
+          <li>El <b>5</b> vale 500 (centenas)</li>
+          <li>El <b>7</b> vale 70 (decenas)</li>
+          <li>El <b>3</b> vale 3 (unidades)</li>
+          <li>El <b>8</b> vale 0.8 (décimos)</li>
+          <li>El <b>2</b> vale 0.02 (centésimos)</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Tipos de números -->
+    <section class="card pastel-azul fade-in">
+      <h2>🧮 Tipos de números</h2>
+      <div class="tipos-grid">
+        <div><b>Naturales</b><br>1, 2, 3, 4...</div>
+        <div><b>Fraccionarios</b><br>½, ¾, 2½...</div>
+        <div><b>Decimales</b><br>0.5, 3.25, 7.8...</div>
+      </div>
+      <p>Se comparan usando los signos <b>&lt;</b> (menor), <b>&gt;</b> (mayor) y <b>=</b> (igual).</p>
+    </section>
+
+    <!-- Actividad interactiva -->
+    <section class="card pastel-verde fade-in">
+      <h2>🎯 Actividad Interactiva</h2>
+      <p>Haz clic en el número que creas que es <b>mayor</b>. Gana puntos si aciertas.</p>
+
+      <div id="numeros" class="numeros">
+        <button id="num1" class="numero"></button>
+        <div class="signo">?</div>
+        <button id="num2" class="numero"></button>
+      </div>
+
+      <p id="resultado" class="resultado"></p>
+      <p id="explicacion" class="explicacion"></p>
+
+      <div class="acciones">
+        <button id="nuevo" class="boton">🔄 Nueva ronda</button>
+        <p>Puntaje: <span id="puntos">0</span></p>
+      </div>
+    </section>
+
+    <!-- Mini evaluación -->
+   <section class="card pastel-lila fade-in">
+  <h2>📝 Autoevaluación</h2>
+  <form id="quiz">
+    <div class="pregunta">
+      <p>1️⃣ ¿Cuál es el valor del número 7 en 7,524?</p>
+      <label><input type="radio" name="p1" value="a"> 7 unidades</label><br>
+      <label><input type="radio" name="p1" value="b"> 7,000 unidades</label><br>
+      <label><input type="radio" name="p1" value="c"> 70 unidades</label>
+    </div>
+
+    <div class="pregunta">
+      <p>2️⃣ ¿Qué número es mayor?</p>
+      <label><input type="radio" name="p2" value="a"> 0.75</label><br>
+      <label><input type="radio" name="p2" value="b"> ¾</label><br>
+      <label><input type="radio" name="p2" value="c"> Son iguales</label>
+    </div>
+
+    <div class="pregunta">
+      <p>3️⃣ ¿Cuál de estos números es fraccionario?</p>
+      <label><input type="radio" name="p3" value="a"> 5.2</label><br>
+      <label><input type="radio" name="p3" value="b"> ⅔</label><br>
+      <label><input type="radio" name="p3" value="c"> 10</label>
+    </div>
+
+    <button type="button" id="verificarQuiz" class="boton">✅ Verificar respuestas</button>
+  </form>
+
+  <div id="resultadoQuiz" class="resultado"></div>
+
+  <a href="index.html" class="boton" style="margin-top:1.5rem;">⬅️ Volver al inicio</a>
+</section>
+>>>>>>> 6953e1193cc30d017f529228d62f175d0ac7ba82
